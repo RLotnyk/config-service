@@ -6,9 +6,9 @@ server:
 spring:
   profiles:
     active: git
-  application.name: config-server
+  application.name: service-config
   cloud.config.server:
     git:
-      uri: file://home/roman/github_my/config-service
+      uri: file://${user.home}/github_my/config-service
       order: 1
 

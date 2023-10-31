@@ -1,0 +1,14 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /config
+
+spring:
+  profiles:
+    active: git
+  application.name: service-config
+  cloud.config.server:
+    git:
+      uri: file://${user.home}/github_my/config-service
+      order: 1
+
